@@ -45,10 +45,21 @@ width: 20%;
     background-color: rgb(2, 2, 194);
     height: 100%;
     width: 70%;
+        overflow: hidden;
+        overflow: auto;
 }
-table{
-    width: 90%;
-    background-color: rgb(247, 15, 15);
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+.imagg , .flag , .logo{
+    width: 32px;
 }
-
-
+img{
+}
