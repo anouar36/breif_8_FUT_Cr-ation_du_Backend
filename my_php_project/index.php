@@ -137,10 +137,12 @@ $result = mysqli_query($con,$query);
  					</span>
  				</li>
  				<li>
+					<a href="/index.html">
  					<i class='bx bxs-dollar-circle' ></i>
+
  					<span class="text">
  						<h3>ADD PLAYER</h3>
-
+						 </a>
  					</span>
  				</li>
  			</ul>
