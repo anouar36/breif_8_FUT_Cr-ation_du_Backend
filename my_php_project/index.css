@@ -18,9 +18,8 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 700px;
   width: 100%;
- 
   background-color: #fff;
   padding: 25px 30px;
   border-radius: 5px;
@@ -31,6 +30,22 @@ body {
   font-size: 25px;
   font-weight: 500;
   position: relative;
+}
+select{
+  width: 100%;
+display: block;
+font-weight: 500;
+margin-bottom: 5px;
+height: 45px;
+outline: none;
+font-size: 16px;
+border-radius: 5px;
+padding-left: 15px;
+border-bottom-width: 2px;
+transition: all 0.3s ease;
+border-color: #9c59b6ed;
+margin-bottom: 15px;
+
 }
 
 .container .title::before {
@@ -50,10 +65,7 @@ body {
   justify-content: space-between;
   margin: 20px 0 12px 0;
 }
-form{
-    border: red solid 2px;
-    height:800px;
-}
+
 form .user-details .input-box {
   margin-bottom: 15px;
   width: calc(100% / 2 - 20px);
@@ -65,24 +77,6 @@ form .input-box span.details {
   margin-bottom: 5px;
 }
 
-select{
-    width: 100%;
-display: block;
-  font-weight: 500;
-  margin-bottom: 5px;
-  height: 45px;
-  outline: none;
-  font-size: 16px;
-  border-radius: 5px;
-  padding-left: 15px;
-  border-bottom-width: 2px;
-  transition: all 0.3s ease;
-  border-color: #9c59b6ed;
-  margin-bottom: 15px;
- 
-
-
-}
 .user-details .input-box input {
   height: 45px;
   width: 100%;
