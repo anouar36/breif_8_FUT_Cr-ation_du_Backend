@@ -19,7 +19,6 @@ if (isset($_POST['delete'])) {
 }
 
 ?>
-<a href=""></a>
  <!DOCTYPE html>
 <html lang="en">
   <head>
