@@ -1,25 +1,4 @@
-<?php
-require_once ('db.php');
-$query = "SELECT  players.id, players.name_player, players.photo, clubs.logo, nationality.flag
-FROM players
-INNER JOIN clubs ON players.id_club = clubs.id
-INNER JOIN nationality ON players.id_natio = nationality.id"; 
-$result = mysqli_query($con,$query);
-?>
-<?php
-if (isset($_POST['delete'])) {
-    $id = $_POST['id'];
-    if (!empty($id)) {
-        $delete = mysqli_query($con, "DELETE FROM `players` WHERE `id`='$id'");
-		if($delete){
-			header("Location: index.php");
-			exit();
-		}
-    } 
-}
-
-?>
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -146,28 +125,27 @@ if (isset($_POST['delete'])) {
                   </td>
 
                   <td>
-                    <a class="btn" href="edit.php?updateid=<?php echo $row['id']; ?>">
-						 <img src="outils.png" alt=""/></a>
+                    <a
+                      class="btn"
+                      href="edit.php?updateid=<?php echo $row['id']; ?>"
+                      ><img src="outils.png" alt=""
+                    /></a>
                   </td>
                   <td>
-
-				  <a href="index.php">
-					<form method="POST" action="">
-                      <input type="hidden" name="id" value="<?php echo $row['id']; ?>"/>
-                    <button type="submit" name="delete" onclick="return confirm('are you ser for delete ')">
-                        <img src="supprimer.png" alt="Delete"/>
+                    <form method="POST" action="">
+                      <input
+                        type="hidden"
+                        name="id"
+                        value="<?php echo $row['id']; ?>"
+                      />
+                      <button
+                        type="submit"
+                        name="delete"
+                        onclick="return confirm('are you ser for delete ')"
+                      >
+                        <img src="supprimer.png" alt="Delete" />
                       </button>
                     </form>
-				</a>
-
-
-
-
-
-
-
-
-                    
                   </td>
                 </tr>
                 <?php
@@ -185,13 +163,3 @@ if (isset($_POST['delete'])) {
     <script src="/assets/stylesheet/index.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
